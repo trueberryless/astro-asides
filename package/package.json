@@ -1,0 +1,51 @@
+{
+	"name": "astro-asides",
+	"version": "0.0.0",
+	"description": "Convert Markdown `:::` blocks to HTML `<aside>` elements.",
+	"license": "MIT",
+	"keywords": [
+		"astro-integration",
+		"astro-component",
+		"withastro",
+		"astro",
+		"asides"
+	],
+	"homepage": "https://astro-asides.netlify.app",
+	"publishConfig": {
+		"access": "public"
+	},
+	"sideEffects": false,
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"default": "./dist/index.js"
+		}
+	},
+	"files": [
+		"dist"
+	],
+	"scripts": {
+		"dev": "tsup --watch",
+		"build": "tsup"
+	},
+	"type": "module",
+	"peerDependencies": {
+		"astro": "^5.0.0"
+	},
+	"dependencies": {
+		"astro-integration-kit": "^0.18.0",
+		"hastscript": "^9.0.1",
+		"mdast-util-directive": "^3.1.0",
+		"mdast-util-to-markdown": "^2.1.2",
+		"mdast-util-to-string": "^4.0.0",
+		"remark": "^15.0.1",
+		"remark-directive": "^4.0.0",
+		"unified": "^11.0.5",
+		"unist-util-visit": "^5.0.0"
+	},
+	"devDependencies": {
+		"@types/mdast": "^4.0.4",
+		"mdast": "^3.0.0",
+		"tsup": "^8.4.0"
+	}
+}

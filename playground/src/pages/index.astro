@@ -1,0 +1,22 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { getCollection, render } from "astro:content";
+
+// Load the content (just the first doc for simplicity)
+const entries = await getCollection("docs");
+const doc = entries[0];
+const { Content } = await render(doc);
+---
+
+<Layout title="Welcome to Astro.">
+	<main>
+		<!-- Existing SVG and header content... -->
+
+		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
+
+		<section class="instructions">
+			<Content />
+		</section>
+
+	</main>
+</Layout>
